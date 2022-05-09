@@ -1,0 +1,158 @@
+body {
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+textarea {
+    overflow: auto;
+    margin-left: 597px;
+    width: 700px;
+    height: 200px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #444444;
+}
+.title {
+    text-align: center;
+}
+.info {
+    text-align: center;
+}
+.keyboard {
+    width: 718px;
+    margin: 0 auto;
+    padding: 5px;
+    padding-left: 0;
+    padding-bottom: 0;
+    background: plum;
+    border: 3px solid purple;
+    border-radius: 5px;
+}
+.keyboard__row1, .keyboard__row2, .keyboard__row3, .keyboard__row4, .keyboard__row5 {
+    clear: both;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+.keyboard__row1Eng, .keyboard__row2Eng, .keyboard__row3Eng, .keyboard__row4Eng{
+    display: none;
+    clear: both;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+.keyboard__row1Eng.active, .keyboard__row2Eng.active, .keyboard__row3Eng.active, .keyboard__row4Eng.active{
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+.keyboard__row1.active, .keyboard__row2.active, .keyboard__row3.active, .keyboard__row4.active, .keyboard__row5.active {
+    display: none;
+    clear: both;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.keyboard__row2Caps, .keyboard__row3Caps, .keyboard__row4Caps {
+    display: none;
+    clear: both;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.keyboard__row2Caps.active, .keyboard__row3Caps.active, .keyboard__row4Caps.active {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+.keyboard__row1Shift {
+    display: none;
+    clear: both;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+.keyboard__row1Shift.active {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+.keyboard__key {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    background: palevioletred;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    transition: border-radius 0.3s, background-color 0.3s;
+}
+.keyboard__keyB {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    background: palevioletred;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    transition: border-radius 0.3s, background-color 0.3s;
+}
+.keyboard__keyD, .keyboard__keyD1, .keyboard__keyC, .keyboard__keyA, .keyboard__keyK {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    background: palevioletred;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    transition: border-radius 0.3s, background-color 0.3s;
+}
+.keyboard__keyE, .keyboard__keyT, .keyboard__keyS {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    background: palevioletred;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    transition: border-radius 0.3s, background-color 0.3s;
+}
+.Backspace, .BackspaceEng, .Capslock, .Enter, .Enter1, .Shift, .Shift1, .Shift2, .Shift3, .Capslock1, .CapslockEng, .EnterEng, .ShiftEng, .Shift2Eng {
+    width: 100px;
+}
+.Space {
+    width: 342px;
+}
+.Tab, .Del, .Tab1, .Del1, .TabEng, .DelEng {
+    width: 54px;
+}
