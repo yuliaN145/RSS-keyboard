@@ -494,6 +494,16 @@ const row3lang = document.querySelector('.keyboard__row3Eng');
 const row4lang = document.querySelector('.keyboard__row4Eng');
 let key = document.querySelectorAll('.keyboard__key');
 
+
+if (localStorage.getItem('bg-theme') === 'light') {
+    row2lang.classList.add('active');
+    row2.classList.add('active');
+    row3lang.classList.add('active');
+    row3.classList.add('active');
+    row4lang.classList.add('active');
+    row4.classList.add('active');
+}
+
 document.onkeydown = function (event) {
     //keyboardNum.push(event.charCode);
     //console.log(keyboardNum);
@@ -573,6 +583,8 @@ document.onkeydown = function (event) {
             row3.classList.add('active');
             row4lang.classList.add('active');
             row4.classList.add('active');
+            localStorage.setItem('bg-theme', "light");
+            
         }else {
             row2lang.classList.remove('active');
             row2.classList.remove('active');
@@ -580,6 +592,7 @@ document.onkeydown = function (event) {
             row3.classList.remove('active');
             row4lang.classList.remove('active');
             row4.classList.remove('active');
+            localStorage.removeItem("bg-theme");
         }
     }
     else if (event.key === 'Alt') {
