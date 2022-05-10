@@ -587,9 +587,24 @@ document.onkeydown = function (event) {
     }
     else if (event.key === 'Win') {
         
-    }
+    }/*
     else {
         textArea.textContent += event.key;
+    }*/
+    else if (event.key) {
+        for (let k of key) {
+            if (event.key === k.textContent) {
+                textArea.textContent += event.key;
+                k.classList.add('active');
+                document.onkeyup = function (event) {
+                    if (event.key) {
+                        for (let k of key) {
+                                k.classList.remove('active');
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
