@@ -124,7 +124,7 @@ initRow4 ();
 
 function row5 () {
     keyboardRow5.innerHTML = '<div class="keyboard__keyK"><span class="key" >'+ 'Ctrl' + '</span></div>' +
-                             '<div class="keyboard__key Win"><span class="key" >'+ 'Win' + '</span></div>' +
+                             '<div class="keyboard__keyW Win"><span class="key" >'+ 'Win' + '</span></div>' +
                              '<div class="keyboard__keyA Alt"><span class="key" >'+ 'Alt' + '</span></div>' +
                              '<div class="keyboard__key Space"><span class="key" >'+ ' ' + '</span></div>'+
                              '<div class="keyboard__keyA Alt"><span class="key" >'+ 'Alt' + '</span></div>'+
@@ -582,6 +582,12 @@ document.onkeydown = function (event) {
             row4.classList.remove('active');
         }
     }
+    else if (event.key === 'Alt') {
+
+    }
+    else if (event.key === 'Win') {
+        
+    }
     else {
         textArea.textContent += event.key;
     }
@@ -634,12 +640,92 @@ function enterWord () {
                 display.textContent += k.textContent;
             }
         }
+        k.addEventListener('mousedown', function () {
+            k.classList.add('active');
+        })
+        k.addEventListener('mouseup', function () {
+            k.classList.remove('active');
+        })
     } 
 }
 enterWord();
 
 
-
+let c = document.querySelectorAll('.keyboard__keyC');
+let s = document.querySelectorAll('.keyboard__keyS');
+let b = document.querySelectorAll('.keyboard__keyB');
+let d = document.querySelectorAll('.keyboard__keyD');
+let e = document.querySelectorAll('.keyboard__keyE');
+let kc = document.querySelectorAll('.keyboard__keyK');
+let a = document.querySelectorAll('.keyboard__keyA');
+let w = document.querySelectorAll('.keyboard__keyW');
+function hover () {
+    for(let k of c){
+        k.addEventListener('mousedown', function () {
+            k.classList.add('active');
+        })
+        k.addEventListener('mouseup', function () {
+            k.classList.remove('active');
+        })
+    }
+    for(let ks of s){
+        ks.addEventListener('mousedown', function () {
+            ks.classList.add('active');
+        })
+        ks.addEventListener('mouseup', function () {
+            ks.classList.remove('active');
+        })
+    }
+    for(let ks of b){
+        ks.addEventListener('mousedown', function () {
+            ks.classList.add('active');
+        })
+        ks.addEventListener('mouseup', function () {
+            ks.classList.remove('active');
+        })
+    } 
+    for(let ks of d){
+        ks.addEventListener('mousedown', function () {
+            ks.classList.add('active');
+        })
+        ks.addEventListener('mouseup', function () {
+            ks.classList.remove('active');
+        })
+    } 
+    for(let ks of e){
+        ks.addEventListener('mousedown', function () {
+            ks.classList.add('active');
+        })
+        ks.addEventListener('mouseup', function () {
+            ks.classList.remove('active');
+        })
+    }
+    for(let ks of kc){
+        ks.addEventListener('mousedown', function () {
+            ks.classList.add('active');
+        })
+        ks.addEventListener('mouseup', function () {
+            ks.classList.remove('active');
+        })
+    }
+    for(let ks of a){
+        ks.addEventListener('mousedown', function () {
+            ks.classList.add('active');
+        })
+        ks.addEventListener('mouseup', function () {
+            ks.classList.remove('active');
+        })
+    }
+    for(let ks of w){
+        ks.addEventListener('mousedown', function () {
+            ks.classList.add('active');
+        })
+        ks.addEventListener('mouseup', function () {
+            ks.classList.remove('active');
+        })
+    }  
+} 
+hover();
 
 
 

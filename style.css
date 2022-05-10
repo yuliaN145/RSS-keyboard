@@ -102,7 +102,7 @@ textarea {
     user-select: none;
     transition: border-radius 0.3s, background-color 0.3s;
 }
-.keyboard__keyB {
+.keyboard__keyD, .keyboard__keyD1, .keyboard__keyC, .keyboard__keyA, .keyboard__keyK, .keyboard__keyB, .keyboard__keyE, .keyboard__keyT, .keyboard__keyS,.keyboard__keyW {
     float: left;
     width: 40px;
     height: 40px;
@@ -117,36 +117,11 @@ textarea {
     user-select: none;
     transition: border-radius 0.3s, background-color 0.3s;
 }
-.keyboard__keyD, .keyboard__keyD1, .keyboard__keyC, .keyboard__keyA, .keyboard__keyK {
-    float: left;
-    width: 40px;
-    height: 40px;
-    margin-left: 6px;
-    font-weight: 500;
-    line-height: 40px;
-    text-align: center;
-    color: #ffffff;
-    background: palevioletred;
-    border-radius: 3px;
-    cursor: pointer;
-    user-select: none;
-    transition: border-radius 0.3s, background-color 0.3s;
+
+.keyboard__key.active,.keyboard__keyW.active, .keyboard__keyC.active,.keyboard__keyD.active, .keyboard__keyD1.active, .keyboard__keyA.active, .keyboard__keyK.active, .keyboard__keyB.active, .keyboard__keyE.active, .keyboard__keyT.active, .keyboard__keyS.active{
+    background: purple;
 }
-.keyboard__keyE, .keyboard__keyT, .keyboard__keyS {
-    float: left;
-    width: 40px;
-    height: 40px;
-    margin-left: 6px;
-    font-weight: 500;
-    line-height: 40px;
-    text-align: center;
-    color: #ffffff;
-    background: palevioletred;
-    border-radius: 3px;
-    cursor: pointer;
-    user-select: none;
-    transition: border-radius 0.3s, background-color 0.3s;
-}
+
 .Backspace, .BackspaceEng, .Capslock, .Enter, .Enter1, .Shift, .Shift1, .Shift2, .Shift3, .Capslock1, .CapslockEng, .EnterEng, .ShiftEng, .Shift2Eng {
     width: 100px;
 }
