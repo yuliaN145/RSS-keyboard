@@ -504,11 +504,27 @@ if (localStorage.getItem('bg-theme') === 'light') {
     row4.classList.add('active');
 }
 
+let c = document.querySelectorAll('.keyboard__keyC');
+let s = document.querySelectorAll('.keyboard__keyS');
+let b = document.querySelectorAll('.keyboard__keyB');
+let d = document.querySelectorAll('.keyboard__keyD');
+let e = document.querySelectorAll('.keyboard__keyE');
+let kc = document.querySelectorAll('.keyboard__keyK');
+let a = document.querySelectorAll('.keyboard__keyA');
+let w = document.querySelectorAll('.keyboard__keyW');
 document.onkeydown = function (event) {
     //keyboardNum.push(event.charCode);
     //console.log(keyboardNum);
     if (event.key === 'Backspace') {
         let position = display.selectionStart - 1;
+        for (let k of b) {
+            k.classList.add('active');
+            document.onkeyup = function () {
+                    for (let k of b) {
+                            k.classList.remove('active');
+                }
+            }
+        }
         if (position >= 1) {
             let str = display.innerHTML;
             let res = str.substring(0, position) + '' + str.substring(position + 1);
@@ -520,6 +536,14 @@ document.onkeydown = function (event) {
             display.innerHTML = res;
         }
     } else if (event.key === 'CapsLock') {
+        for (let k of c) {
+            k.classList.add('active');
+            document.onkeyup = function () {
+                    for (let k of c) {
+                            k.classList.remove('active');
+                }
+            }
+        }
         if (CAPS2.className === 'keyboard__row2Caps' || row2.className === 'keyboard__row2') {
             CAPS2.classList.add('active');
             row2.classList.add('active');
@@ -536,6 +560,14 @@ document.onkeydown = function (event) {
             row4.classList.remove('active');
         }
     } else if (event.key === 'Delete') {
+        for (let k of d) {
+            k.classList.add('active');
+            document.onkeyup = function () {
+                    for (let k of d) {
+                            k.classList.remove('active');
+                }
+            }
+        }
         let position = display.selectionStart;
             if (position >= 0) {
                 let str = display.innerHTML;
@@ -554,6 +586,14 @@ document.onkeydown = function (event) {
             }
     }
     else if (event.key === 'Enter') {
+        for (let k of e) {
+            k.classList.add('active');
+            document.onkeyup = function () {
+                    for (let k of e) {
+                            k.classList.remove('active');
+                }
+            }
+        }
         let position = display.selectionStart;
         if (position >= 1) {
             let str = display.innerHTML;
@@ -566,6 +606,24 @@ document.onkeydown = function (event) {
         } 
     }
     else if (event.key === 'Shift') {
+        for (let k of s) {
+            k.classList.add('active');
+            document.onkeyup = function (event) {
+                    for (let k of s) {
+                            k.classList.remove('active');
+                    }
+                    if (event.key === 'Shift') {
+                        CAPSROW1.classList.remove('active');
+                        row1.classList.remove('active');
+                        CAPS2.classList.remove('active');
+                        row2.classList.remove('active');
+                        CAPS3.classList.remove('active');
+                        row3.classList.remove('active');
+                        CAPS4.classList.remove('active');
+                        row4.classList.remove('active');
+                    }
+            }
+        }
         CAPSROW1.classList.add('active');
         row1.classList.add('active');
         CAPS2.classList.add('active');
@@ -576,6 +634,14 @@ document.onkeydown = function (event) {
         row4.classList.add('active');
     }
     else if (event.key === 'Control') {
+        for (let k of kc) {
+            k.classList.add('active');
+            document.onkeyup = function () {
+                    for (let k of kc) {
+                            k.classList.remove('active');
+                }
+            }
+        }
         if (row2lang.className === 'keyboard__row2Eng') {
             row2lang.classList.add('active');
             row2.classList.add('active');
@@ -596,7 +662,14 @@ document.onkeydown = function (event) {
         }
     }
     else if (event.key === 'Alt') {
-
+        for (let k of a) {
+            k.classList.add('active');
+            document.onkeyup = function () {
+                    for (let k of a) {
+                            k.classList.remove('active');
+                }
+            }
+        }
     }
     else if (event.key === 'Win') {
         
@@ -620,7 +693,7 @@ document.onkeydown = function (event) {
         }
     }
 }
-
+/*
 document.onkeyup = function (event) {
     if (event.key === 'Shift') {
         CAPSROW1.classList.remove('active');
@@ -632,7 +705,7 @@ document.onkeyup = function (event) {
         CAPS4.classList.remove('active');
         row4.classList.remove('active');
     }
-};
+};*/
 /*
 const row2lang = document.querySelector('.keyboard__row2Eng');
 const row3lang = document.querySelector('.keyboard__row3Eng');
@@ -679,14 +752,7 @@ function enterWord () {
 enterWord();
 
 
-let c = document.querySelectorAll('.keyboard__keyC');
-let s = document.querySelectorAll('.keyboard__keyS');
-let b = document.querySelectorAll('.keyboard__keyB');
-let d = document.querySelectorAll('.keyboard__keyD');
-let e = document.querySelectorAll('.keyboard__keyE');
-let kc = document.querySelectorAll('.keyboard__keyK');
-let a = document.querySelectorAll('.keyboard__keyA');
-let w = document.querySelectorAll('.keyboard__keyW');
+
 function hover () {
     for(let k of c){
         k.addEventListener('mousedown', function () {
